@@ -8,7 +8,7 @@ The model is described by equations:
 
 dN1/dt = -k1 * N1
 
-dN2/dt = -dN1/dt - k2 * N2
+dN2/dt = k1 * N1 - k2 * N2
 
 This translates directly to schematics![schematics](schematics.jpg). Notice that we need to add inverter for - k2*N2(t) branch as summer implicitly inverts its output. 
 
@@ -32,7 +32,7 @@ Sample waveforms:
 
 Further expansion to 3 transient elemenents (plus final element) is straightforward. We simply add the equation:
 
-dN3/dt = -dN2/dt - k3 * N3
+dN3/dt = k2 * N2 - k3 * N3
 
 and connect it via summer to the exisitng circuit the same way, as we have added circuit for N2(t) in previous step. See schematics: ![schematics3](schematics_3_elements.jpg).
 
@@ -46,3 +46,7 @@ Picture above shows the sample implementation. Since I have only 2 channel oscil
 * Notice how element N3 (yellow) builds up, surpassing the amount of element N2, before decaying into the final product.
 
 ![01_decay_chain_3_elements.png](01_decay_chain_3_elements.png)
+
+Compare it against the [analytical solution](https://www.geogebra.org/calculator/mhvaucpd).
+
+![01_decay_chain_3_elements_exact_solution.png](01_decay_chain_3_elements_exact_solution.png)
