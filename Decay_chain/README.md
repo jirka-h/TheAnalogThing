@@ -47,6 +47,6 @@ Picture above shows the sample implementation. Since I have only 2 channel oscil
 
 ![01_decay_chain_3_elements.png](01_decay_chain_3_elements.png)
 
-Compare it against the [analytical solution](https://www.geogebra.org/calculator/mhvaucpd).
+Compare it against the [analytical solution.](https://www.geogebra.org/m/pzeu65am)
 
 ![01_decay_chain_3_elements_exact_solution.png](01_decay_chain_3_elements_exact_solution.png)
