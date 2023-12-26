@@ -36,7 +36,7 @@ dN3/dt = k2 * N2 - k3 * N3
 
 and connect it via summer to the exisitng circuit the same way, as we have added circuit for N2(t) in previous step. See schematics: ![schematics3](schematics_3_elements.jpg).
 
-![wiring3](wiring_3_elements.jpg) 
+![wiring3](wiring_3_elements.jpg)
 
 Picture above shows the sample implementation. Since I have only 2 channel oscilloscope available, only N2(t) (blue) and N3(t) (yellow) are displayed. Coefficients 1-3 are set to emulate this scenario:
 * N1 - fast decay (coeff 1 = 0.58)
