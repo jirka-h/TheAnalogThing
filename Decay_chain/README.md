@@ -21,6 +21,7 @@ yellow: N1(t), N1(t=0) = +1 (THAT units)
 blue:   N2(t), N2(t=0) = 0  (THAT units)
 
 Sample waveforms:
+
 ![01_decay_chain_2_elements](01_decay_chain_2_elements.png)
 ![02_decay_chain_2_elements](02_decay_chain_2_elements.png)
 ![03_decay_chain_2_elements](03_decay_chain_2_elements.png)
