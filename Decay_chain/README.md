@@ -28,19 +28,21 @@ Sample waveforms:
 ![04_decay_chain_2_elements](04_decay_chain_2_elements.png)
 ![05_decay_chain_2_elements](05_decay_chain_2_elements.png)
 
-## 3 elements (plus final element)
+## 3 transient elements (plus final element)
 
-Further expansion to 3 elemenents (plus final element) is straightforward. We simply add the equation:
+Further expansion to 3 transient elemenents (plus final element) is straightforward. We simply add the equation:
 
 dN3/dt = -dN2/dt - k3 * N3
 
-and connect it via summer to the exisitng circuit the same way, as we have added cicuit for N2(t) in previous step. See schematics: ![schematics3](schematics_3_elements.jpg).
+and connect it via summer to the exisitng circuit the same way, as we have added circuit for N2(t) in previous step. See schematics: ![schematics3](schematics_3_elements.jpg).
 
-![wiring3](wiring_3_elements.jpg) shows the sample implementation. Since I have only 2 channel oscilloscope available, only N2(t) (blue) and N3(t) (yellow) are displayed. Coefficients 1-3 are set to emulate this scenario:
-* N1 - fast decay (coeff 1 - 0.58)
-* N2 - intermediate decay speed (coeff 2 - 0.45)
-* N3 - slow decay speed (coeff 3 - 0.11) 
+![wiring3](wiring_3_elements.jpg) 
 
-* Notice, how element N3 (yellow) builds up, surpassing the amount of elelement N2, before decaying into the final product.
+Picture above shows the sample implementation. Since I have only 2 channel oscilloscope available, only N2(t) (blue) and N3(t) (yellow) are displayed. Coefficients 1-3 are set to emulate this scenario:
+* N1 - fast decay (coeff 1 = 0.58)
+* N2 - intermediate decay speed (coeff 2 = 0.45)
+* N3 - slow decay speed (coeff 3 = 0.11) 
+
+* Notice how element N3 (yellow) builds up, surpassing the amount of element N2, before decaying into the final product.
 
 ![01_decay_chain_3_elements.png](01_decay_chain_3_elements.png)
