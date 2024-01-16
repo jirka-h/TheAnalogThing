@@ -50,3 +50,7 @@ Picture above shows the sample implementation. Since I have only 2 channel oscil
 Compare it against the [analytical solution.](https://www.geogebra.org/m/pzeu65am) N1 (initial element, green) and N4 (final element, magenta) are also displayed. N2 (blue) and N3 (yellow) are drawn in the same color as on the oscilloscope. 
 
 ![01_decay_chain_3_elements_exact_solution.png](01_decay_chain_3_elements_exact_solution.png)
+
+I have overlayed the picture from the oscilloscope over the exact solution - as you can see, there is almost a perfect match for N2 and N3 dynamics. Both curves are very hard to distinguish apart.
+
+![01_decay_chain_3_elements_compare.png](01_decay_chain_3_elements_compare.png)
