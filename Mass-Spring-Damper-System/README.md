@@ -23,7 +23,7 @@ I have started the simulation using the recommended parameters:
 In this mode, damping is very low and we get almost harmonic oscillations. 
 ![01_Low_damping.png](01_Low_damping.png)
 
-The speed is phase shifted from displacement by Pi/2 (90 degrees). (x coordinate = displacement, y coordinate = speed)
+The speed is phase shifted from displacement by Pi/2 (90 degrees). (x coordinate = displacement, y coordinate = speed). Note that diameter of circles is slowly getting smaller, which represents the damping.
 ![01_Low_damping_phase_diagram.png](01_Low_damping_phase_diagram.png)
 
 ## Moderate damping
@@ -50,4 +50,6 @@ Here I have attempted to tune the suspension to sweet spot, reducing any oversho
 * THAT coef 3: D = 1.0 (Damping coeffiecint)
 
   ![04_Suspension_tuning_to_reduce_overshooting.png](04_Suspension_tuning_to_reduce_overshooting.png)
-  ![04_Suspension_tuning_to_reduce_overshooting_phase_diagram.png]
+
+  We reach the equlibrium almost at the same time as with D=1.0 and s=0.5 above, but this time without any overshooting. 
+  ![04_Suspension_tuning_to_reduce_overshooting_phase_diagram.png](04_Suspension_tuning_to_reduce_overshooting_phase_diagram.png)
