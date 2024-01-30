@@ -22,13 +22,22 @@ y"(t) = -g - d * y'(t) + c * (-y(t) - 1) for y<-1, meaning that ball is under th
 `c * (-y - 1) for y<-1` is implemented via 10V Zener diode. A voltage of -10V represents -1 unit value. This is inverted, so when voltage drops below -1, the voltage at inverter output is over 10V, and the Zener diode becomes conductive. The current flows to the integrator's SJ (Summing Junction) pin, directly charging the capacitor in the Integrator. However, this works as intended only when the velocity before impact is the same as after the impact. On my THAT computer, this is different. The current through the Zener diode is asymmetrical, leading to higher exit velocity than impact velocity. This breaks the model. 
 
 ## Configuration with four diodes between the Zener diode and SJ pin of the Integrator
-I have tried to mitigate the problem by inserting three additional diodes between the Zener diode na SJ pin of the Integrator, so there were all four diodes from THAT board after the Zener diode. The bounding force represented by Zener current got smaller, increasing charging time from 160 to 210 microseconds, but the disproportion between exit and impact velocity was lower. See the wiring:
+I have tried to mitigate the problem by inserting three additional diodes between the Zener diode and SJ pin of the Integrator, so there were all four diodes from THAT board after the Zener diode. The bounding force represented by Zener current got smaller, increasing charging time from 160 to 210 microseconds, but the disproportion between exit and impact velocity was lower. See the wiring:
 
 ![Wiring](Configuration_with_4_diodes.jpg)
 
-Here are the results:
-![speed_and_velocity_bouncing_ball_modelled_using_4_diodes.png](speed_and_velocity_bouncing_ball_modelled_using_4_diodes.png)
+Here are the results for g=0.16 and d=0.07.
+
+  * Displacement (yellow) and velocity (blue) as the function of time. Notice that the ball velocity after the bounce has increased. This is wrong.
+
+![displacement_and_velocity_bouncing_ball_modelled_using_4_diodes.png](displacement_and_velocity_bouncing_ball_modelled_using_4_diodes.png)
+
+  * Here we see the first bounce in detail. The exit speed is about 1.3x higher than the impact speed.
+
 ![first_bouncing_speed_increase_modelled_using_4_diodes.png](first_bouncing_speed_increase_modelled_using_4_diodes.png)
+
+  * The bouncing force is measured as the voltage at the Zener diode output. We see that it's unsymmetric, leading to exit velocity being higher.
+
 ![bounce_force_modelled_using_4_diodes.png](bounce_force_modelled_using_4_diodes.png)
 
 
